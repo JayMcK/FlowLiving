@@ -49,10 +49,10 @@ export default createTheme({
     },
     h5: {
       fontFamily: "Josefin Sans",
-      fontSize: "1rem",
+      fontSize: "1.25rem",
       fontWeight: 500,
       lineHeight: 1.5,
-      color: flowGold,
+      color: flowRed,
       textTransform: "none",
     },
     h6: {
@@ -79,6 +79,33 @@ export default createTheme({
       fontWeight: 400,
       lineHeight: 1.5,
       textTransform: "none",
+    },
+    sessionButton: {
+      fontFamily: "Josefin Sans",
+      fontSize: "1.25rem",
+      fontWeight: 500,
+      lineHeight: 1.5,
+      textTransform: "none",
+      color: "#fff",
+    },
+  },
+  overrides: {
+    MuiTabs: {
+      indicator: {
+        backgroundColor: flowGold,
+      },
+    },
+    MuiPaper: {
+      root: {
+        backgroundColor: "#fff",
+        border: `1px solid ${flowGold}`,
+      },
+    },
+    MuiList: {
+      padding: {
+        paddingTop: 0,
+        paddingBottom: 0,
+      },
     },
   },
 });
