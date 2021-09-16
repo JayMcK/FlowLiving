@@ -67,6 +67,12 @@ export default createTheme({
       fontWeight: 400,
       lineHeight: 1.5,
     },
+    subtitle2: {
+      fontFamily: "Josefin Sans",
+      fontSize: "1.1rem",
+      fontWeight: 400,
+      lineHeight: 1.5,
+    },
     body1: {
       fontFamily: "Josefin Sans",
       fontSize: "1rem",

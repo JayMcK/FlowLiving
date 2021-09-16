@@ -158,16 +158,19 @@ function ElevationScroll(props) {
   });
 }
 
-export default function Header() {
+export default function Header({
+  value,
+  setValue,
+  selectedIndex,
+  setSelectedIndex,
+}) {
   const classes = useStyles();
   const theme = useTheme();
 
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-  const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
   const [openDrawer, setOpenDrawer] = useState(false);
 
   let routes;
@@ -204,7 +207,7 @@ export default function Header() {
           break;
       }
     });
-  }, [value, selectedIndex, menuOptions, routes]);
+  }, [value, setValue, selectedIndex, setSelectedIndex, menuOptions, routes]);
 
   menuOptions = [
     {
@@ -254,6 +257,7 @@ export default function Header() {
     {
       name: "All Services",
       activeIndex: 1,
+      selectedIndex: 0,
       link: "/services",
       icon: <AllInclusiveIcon color="secondary" fontSize="medium" />,
       ariaOwns: anchorEl ? "menu" : undefined,
