@@ -4,6 +4,8 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
+import Home from "./Home";
+
 import "../App.css";
 
 function App() {
@@ -22,9 +24,15 @@ function App() {
         <Switch>
           <Route
             path="/home"
-            render={() => <h1 style={{ height: "50em" }}>Home</h1>}
+            render={(props) => (
+              <Home
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
           />
-          <Route path="/services" render={() => <h1>Services</h1>} />
+          <Route path="/services" render={() => <h1>services</h1>} />
           <Route path="/reiki" render={() => <h1>reiki</h1>} />
           <Route path="/reflexology" render={() => <h1>reflexology</h1>} />
           <Route path="/tarot" render={() => <h1>tarot</h1>} />

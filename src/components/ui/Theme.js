@@ -82,9 +82,16 @@ export default createTheme({
     learnButton: {
       fontFamily: "Josefin Sans",
       fontSize: "1rem",
-      fontWeight: 400,
+      fontWeight: 700,
       lineHeight: 1.5,
       textTransform: "none",
+      borderRadius: 0,
+      color: flowRed,
+      backgroundColor: "transparent",
+      border: `2px solid ${flowRed}`,
+      "&:hover": {
+        backgroundColor: "transparent",
+      },
     },
     sessionButton: {
       fontFamily: "Josefin Sans",
