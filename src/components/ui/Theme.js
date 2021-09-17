@@ -35,7 +35,7 @@ export default createTheme({
     },
     h3: {
       fontFamily: "Cookie",
-      fontSize: "2rem",
+      fontSize: "3rem",
       fontWeight: 400,
       lineHeight: 1.5,
       color: flowRed,
