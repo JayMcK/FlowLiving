@@ -6,6 +6,10 @@ import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import Home from "./Home";
 import Services from "./Services";
+import Reiki from "./Reiki";
+import Reflexology from "./Reflexology";
+import Tarot from "./Tarot";
+import Counselling from "./Counselling";
 
 import "../App.css";
 
@@ -43,10 +47,54 @@ function App() {
               />
             )}
           />
-          <Route path="/reiki" render={() => <h1>reiki</h1>} />
-          <Route path="/reflexology" render={() => <h1>reflexology</h1>} />
-          <Route path="/tarot" render={() => <h1>tarot</h1>} />
-          <Route path="/counselling" render={() => <h1>counselling</h1>} />
+          <Route
+            path="/reiki"
+            render={(props) => (
+              <Reiki
+                {...props}
+                value={value}
+                selectedIndex={selectedIndex}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
+          <Route
+            path="/reflexology"
+            render={(props) => (
+              <Reflexology
+                {...props}
+                value={value}
+                selectedIndex={selectedIndex}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
+          <Route
+            path="/tarot"
+            render={(props) => (
+              <Tarot
+                {...props}
+                value={value}
+                selectedIndex={selectedIndex}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
+          <Route
+            path="/counselling"
+            render={(props) => (
+              <Counselling
+                {...props}
+                value={value}
+                selectedIndex={selectedIndex}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
           <Route path="/pricing" render={() => <h1>Pricing</h1>} />
           <Route path="/about" render={() => <h1>About</h1>} />
           <Route path="/contact" render={() => <h1>contact</h1>} />

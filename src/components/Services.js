@@ -3,21 +3,12 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import Hidden from "@material-ui/core/Hidden";
 import Grid from "@material-ui/core/Grid";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
 
 import CallToAction from "./ui/CallToAction";
 
-import homeHeroBackground from "../assets/homeHeroBackground.jpg";
 import rightArrow from "../assets/rightArrow.svg";
-import meditate from "../assets/meditate.svg";
-import shopping from "../assets/shopping.svg";
-import pricing from "../assets/pricing.svg";
-import piggyBank from "../assets/piggyBank.svg";
-import infoBackground from "../assets/infoBackground.png";
 import counselling from "../assets/counselling.svg";
 import tarot from "../assets/tarot.svg";
 import reiki from "../assets/reiki.svg";
@@ -321,7 +312,7 @@ export default function Services({ setValue, setSelectedIndex }) {
                 </Button>
               </Grid>
             </Grid>
-            <Grid item md>
+            <Grid item md style={{ marginRight: matchesSM ? 0 : "1em" }}>
               <img
                 src={tarot}
                 alt="woman giving tarot reading"

@@ -75,7 +75,7 @@ export default createTheme({
     },
     body1: {
       fontFamily: "Josefin Sans",
-      fontSize: "1rem",
+      fontSize: "1.25rem",
       fontWeight: 400,
       lineHeight: 1.5,
     },

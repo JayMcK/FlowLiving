@@ -1,0 +1,56 @@
+import React from "react";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+
+import Service from "./commonComponents/Service";
+import CallToAction from "./ui/CallToAction";
+
+import youngWoman from "../assets/youngWoman.svg";
+import olderWoman from "../assets/olderWoman.svg";
+import capWoman from "../assets/capWoman.svg";
+
+const useStyles = makeStyles((theme) => ({}));
+
+export default function Reiki({
+  value,
+  setValue,
+  selectedIndex,
+  setSelectedIndex,
+}) {
+  const classes = useStyles();
+  const theme = useTheme();
+
+  const info = {
+    title: "Reiki",
+    text: "The name Reiki is of Japenese origin - with 'rei' meaning universal and 'ki' meaning life energy. As a form of energy healing, Reiki aims to unblock stagnated and trapped energy in the body where either physical or emotional pain has formed. These energy blocks can cause illness and Reiki aims to remove these energy blocks; aiding the natural flow of energy around the body. Improving energy flow is thought to enable relaxation, relieve pain, speed healing and reduce other symptoms of illness.",
+    imageInfo: [
+      {
+        title: "Healing Within",
+        image: youngWoman,
+        alt: "older woman smiling",
+      },
+      {
+        title: "Clarity of Mind",
+        image: olderWoman,
+        alt: "young woman smiling",
+      },
+      { title: "Energy Healing", image: capWoman, alt: "woman smiling" },
+    ],
+  };
+
+  return (
+    <Grid item>
+      <Grid container direction="column">
+        {/* --- REIKI BLOCK --- */}
+        <Service
+          info={info}
+          value={value}
+          selectedIndex={selectedIndex}
+          setValue={setValue}
+          setSelectedIndex={setSelectedIndex}
+        />
+        <CallToAction setValue={setValue} setSelectedIndex={setSelectedIndex} />
+      </Grid>
+    </Grid>
+  );
+}
