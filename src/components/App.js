@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import Home from "./Home";
+import Services from "./Services";
 
 import "../App.css";
 
@@ -32,7 +33,16 @@ function App() {
               />
             )}
           />
-          <Route path="/services" render={() => <h1>services</h1>} />
+          <Route
+            path="/services"
+            render={(props) => (
+              <Services
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
           <Route path="/reiki" render={() => <h1>reiki</h1>} />
           <Route path="/reflexology" render={() => <h1>reflexology</h1>} />
           <Route path="/tarot" render={() => <h1>tarot</h1>} />

@@ -356,7 +356,7 @@ export default function Home({ setValue, setSelectedIndex }) {
                 item
                 align={matchesSM ? "center" : "right"}
                 style={{
-                  marginLeft: matchesSM ? "1em" : 0,
+                  marginLeft: matchesSM ? "1em" : "1em",
                   marginRight: matchesSM ? "1em" : 0,
                 }}
               >
@@ -535,7 +535,7 @@ export default function Home({ setValue, setSelectedIndex }) {
                 item
                 align={matchesSM ? "center" : "right"}
                 style={{
-                  marginLeft: matchesSM ? "1em" : 0,
+                  marginLeft: matchesSM ? "1em" : "1em",
                   marginRight: matchesSM ? "1em" : 0,
                 }}
               >
