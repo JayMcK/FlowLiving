@@ -10,6 +10,7 @@ import Reiki from "./Reiki";
 import Reflexology from "./Reflexology";
 import Tarot from "./Tarot";
 import Counselling from "./Counselling";
+import About from "./About";
 
 import "../App.css";
 
@@ -96,7 +97,16 @@ function App() {
             )}
           />
           <Route path="/pricing" render={() => <h1>Pricing</h1>} />
-          <Route path="/about" render={() => <h1>About</h1>} />
+          <Route
+            path="/about"
+            render={(props) => (
+              <About
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
           <Route path="/contact" render={() => <h1>contact</h1>} />
           <Route path="/about" render={() => <h1>About</h1>} />
           <Route path="/freesession" render={() => <h1>free session</h1>} />

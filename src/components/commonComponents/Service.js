@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
   iconImage: {
     height: "15em",
+    [theme.breakpoints.down("xs")]: {
+      height: "12.5em",
+    },
   },
   navArrow: {
     "&:hover": {
@@ -36,7 +39,9 @@ export default function Service({
   const classes = useStyles();
   const theme = useTheme();
 
+  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
 
   const iconInfo = info.imageInfo;
 
@@ -89,21 +94,25 @@ export default function Service({
     <Grid item>
       <Grid container direction="column" style={{ marginTop: "2em" }}>
         {/* --- SERVICE BLOCK --- */}
-        <Grid
-          item
-          style={{ marginLeft: "5em" }}
-          align={matchesSM ? "center" : undefined}
-        >
+        <Grid item align="center">
           <Typography variant="h1">{info.title}</Typography>
         </Grid>
         <Grid
           item
           container
-          direction="row"
+          direction={matchesXS ? "column" : "row"}
           alignItems="center"
-          style={{ marginBottom: "5em" }}
+          style={{
+            marginBottom: "5em",
+            marginTop: "2em",
+          }}
         >
-          <Grid item sm align="right">
+          <Grid
+            item
+            sm
+            align="right"
+            style={{ marginBottom: matchesXS ? "1em" : 0 }}
+          >
             <Button
               disableRipple
               className={classes.navArrow}
@@ -117,14 +126,22 @@ export default function Service({
                 src={servicesLeftArrow}
                 alt="arrow back to previous page"
                 className={classes.arrow}
-                style={{ marginRight: "2em" }}
+                style={{ marginRight: matchesXS ? 0 : "2em" }}
               />
             </Button>
           </Grid>
-          <Grid item sm={8} align="center">
+          <Grid
+            item
+            sm={8}
+            align="center"
+            style={{
+              marginLeft: matchesXS ? "1em" : 0,
+              marginRight: matchesXS ? "1em" : 0,
+            }}
+          >
             <Typography variant="body1">{info.text}</Typography>
           </Grid>
-          <Grid item sm>
+          <Grid item sm style={{ marginTop: matchesXS ? "1em" : 0 }}>
             <Button
               disableRipple
               className={classes.navArrow}
@@ -138,7 +155,7 @@ export default function Service({
                 src={servicesRightArrow}
                 alt="arrow forward to next page"
                 className={classes.arrow}
-                style={{ marginLeft: "2em" }}
+                style={{ marginLeft: matchesXS ? 0 : "2em" }}
               />
             </Button>
           </Grid>

@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 
 import Service from "./commonComponents/Service";
 import CallToAction from "./ui/CallToAction";
+import Quote from "./commonComponents/Quote";
 
 import youngWoman from "../assets/youngWoman.svg";
 import olderWoman from "../assets/olderWoman.svg";
@@ -49,6 +50,8 @@ export default function Reiki({
           setValue={setValue}
           setSelectedIndex={setSelectedIndex}
         />
+        {/* --- QUOTE BLOCK --- */}
+        <Quote text="I was experiencing a lot of anxiety, especially since covid. Since starting my Reiki sessions, my anxiety episodes have been far more manageable and less frequent." />
         <CallToAction setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </Grid>
     </Grid>

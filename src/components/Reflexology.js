@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 
 import Service from "./commonComponents/Service";
 import CallToAction from "./ui/CallToAction";
+import Quote from "./commonComponents/Quote";
 
 import chakras from "../assets/chakras.svg";
 import hands from "../assets/hands.svg";
@@ -49,6 +50,8 @@ export default function Reflexology({
           setValue={setValue}
           setSelectedIndex={setSelectedIndex}
         />
+        {/* --- QUOTE BLOCK --- */}
+        <Quote text="I have been having reflexology for about 4 years to help manage my chronic back pain. Since starting my sessions with Flow Living, I have noticed a significant reduction in the pain I feel on a daily basis." />
         <CallToAction setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </Grid>
     </Grid>

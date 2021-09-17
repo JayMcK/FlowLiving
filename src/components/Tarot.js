@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 
 import Service from "./commonComponents/Service";
 import CallToAction from "./ui/CallToAction";
+import Quote from "./commonComponents/Quote";
 
 import cards from "../assets/cards.svg";
 import meaning from "../assets/meaning.svg";
@@ -49,6 +50,7 @@ export default function Tarot({
           setValue={setValue}
           setSelectedIndex={setSelectedIndex}
         />
+        <Quote text="Tarot is my go-to when I am in need of some guidance in my life or am in the middle of a difficult life experience. My session with Flow Living brought me so many insights, I cannot wait for our second session!" />
         <CallToAction setValue={setValue} setSelectedIndex={setSelectedIndex} />
       </Grid>
     </Grid>
