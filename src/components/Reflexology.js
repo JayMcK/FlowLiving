@@ -10,7 +10,11 @@ import chakras from "../assets/chakras.svg";
 import hands from "../assets/hands.svg";
 import healing from "../assets/healing.svg";
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  reflexologyContainer: {
+    border: `1px solid ${theme.palette.common.gold}`,
+  },
+}));
 
 export default function Reflexology({
   value,
@@ -41,7 +45,11 @@ export default function Reflexology({
 
   return (
     <Grid item>
-      <Grid container direction="column">
+      <Grid
+        container
+        direction="column"
+        className={classes.reflexologyContainer}
+      >
         {/* --- REIKI BLOCK --- */}
         <Service
           info={info}

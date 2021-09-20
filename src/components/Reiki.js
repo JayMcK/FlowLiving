@@ -10,7 +10,11 @@ import youngWoman from "../assets/youngWoman.svg";
 import olderWoman from "../assets/olderWoman.svg";
 import capWoman from "../assets/capWoman.svg";
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  reikiContainer: {
+    border: `1px solid ${theme.palette.common.gold}`,
+  },
+}));
 
 export default function Reiki({
   value,
@@ -41,7 +45,7 @@ export default function Reiki({
 
   return (
     <Grid item>
-      <Grid container direction="column">
+      <Grid container direction="column" className={classes.reikiContainer}>
         {/* --- REIKI BLOCK --- */}
         <Service
           info={info}

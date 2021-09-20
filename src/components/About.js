@@ -41,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.gold,
     opacity: 0.5,
   },
+  aboutContainer: {
+    border: `1px solid ${theme.palette.common.gold}`,
+  },
 }));
 
 export default function About({ setValue, setSelectedIndex }) {
@@ -53,7 +56,7 @@ export default function About({ setValue, setSelectedIndex }) {
 
   return (
     <Grid item>
-      <Grid container direction="column">
+      <Grid container direction="column" className={classes.aboutContainer}>
         <Grid
           item
           style={{

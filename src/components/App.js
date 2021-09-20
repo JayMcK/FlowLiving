@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import theme from "./ui/Theme";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import Home from "./Home";
@@ -11,6 +12,7 @@ import Reflexology from "./Reflexology";
 import Tarot from "./Tarot";
 import Counselling from "./Counselling";
 import About from "./About";
+import Pricing from "./Pricing";
 
 import "../App.css";
 
@@ -96,7 +98,16 @@ function App() {
               />
             )}
           />
-          <Route path="/pricing" render={() => <h1>Pricing</h1>} />
+          <Route
+            path="/pricing"
+            render={(props) => (
+              <Pricing
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
           <Route
             path="/about"
             render={(props) => (

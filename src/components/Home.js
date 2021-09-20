@@ -470,9 +470,9 @@ export default function Home({ setValue, setSelectedIndex }) {
               <Grid item style={{ marginBottom: matchesSM ? "2em" : 0 }}>
                 <Button
                   component={Link}
-                  to="/about"
+                  to="/pricing"
                   onClick={() => {
-                    setValue(3);
+                    setValue(2);
                   }}
                   className={classes.learnButton}
                 >
@@ -555,10 +555,9 @@ export default function Home({ setValue, setSelectedIndex }) {
               >
                 <Button
                   component={Link}
-                  to="/services"
+                  to="/freesession"
                   onClick={() => {
-                    setValue(3);
-                    setSelectedIndex(0);
+                    setValue(5);
                   }}
                   className={classes.learnButton}
                 >

@@ -10,7 +10,11 @@ import cards from "../assets/cards.svg";
 import meaning from "../assets/meaning.svg";
 import visions from "../assets/visions.svg";
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  tarotContainer: {
+    border: `1px solid ${theme.palette.common.gold}`,
+  },
+}));
 
 export default function Tarot({
   value,
@@ -41,7 +45,7 @@ export default function Tarot({
 
   return (
     <Grid item>
-      <Grid container direction="column">
+      <Grid container direction="column" className={classes.tarotContainer}>
         {/* --- REIKI BLOCK --- */}
         <Service
           info={info}
