@@ -192,6 +192,7 @@ export default function About({ setValue, setSelectedIndex }) {
           ? counselling
           : null}
       </Grid>
+      <CallToAction setValue={setValue} setSelectedIndex={setSelectedIndex} />
     </Grid>
   );
 }

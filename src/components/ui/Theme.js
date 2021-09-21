@@ -120,5 +120,36 @@ export default createTheme({
         paddingBottom: 0,
       },
     },
+    MuiInputLabel: {
+      root: {
+        color: flowRed,
+        fontSize: "1rem",
+      },
+    },
+    MuiInput: {
+      root: {
+        color: flowRed,
+        fontWeight: 300,
+      },
+      underline: {
+        "&:before": {
+          borderBottom: `2px solid ${flowRed}`,
+        },
+        "&:hover:not($disabled):not($focused):not($error):before": {
+          borderBottom: `2px solid ${flowGold}`,
+        },
+      },
+    },
+    MuiFormControlLabel: {
+      root: {
+        marginLeft: 0,
+        marginRight: 0,
+      },
+    },
+    MuiRadio: {
+      root: {
+        color: flowGold,
+      },
+    },
   },
 });

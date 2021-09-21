@@ -13,6 +13,8 @@ import Tarot from "./Tarot";
 import Counselling from "./Counselling";
 import About from "./About";
 import Pricing from "./Pricing";
+import Contact from "./Contact";
+import FreeSession from "./FreeSession";
 
 import "../App.css";
 
@@ -118,9 +120,26 @@ function App() {
               />
             )}
           />
-          <Route path="/contact" render={() => <h1>contact</h1>} />
-          <Route path="/about" render={() => <h1>About</h1>} />
-          <Route path="/freesession" render={() => <h1>free session</h1>} />
+          <Route
+            path="/contact"
+            render={(props) => (
+              <Contact
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
+          <Route
+            path="/freeSession"
+            render={(props) => (
+              <FreeSession
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
           <Route path="/not-found" render={() => <h1>not found</h1>} />
           <Redirect from="/" exact to="/home" />
           <Redirect to="/not-found" />
