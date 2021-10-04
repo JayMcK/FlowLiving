@@ -172,6 +172,7 @@ export default function About({ setValue, setSelectedIndex }) {
               >
                 {services.map((service) => (
                   <FormControlLabel
+                    key={service.label}
                     value={service.label}
                     control={<Radio />}
                     label={service.label}

@@ -21,6 +21,9 @@ import telephone from "../assets/telephone.svg";
 import envelope from "../assets/envelope.svg";
 
 const useStyles = makeStyles((theme) => ({
+  pageContainer: {
+    border: `1px solid ${theme.palette.common.gold}`,
+  },
   background: {
     height: "100%",
     width: "100%",
@@ -137,7 +140,7 @@ export default function Contact({ setValue, setSelectedIndex }) {
 
   return (
     <Grid item>
-      <Grid item container direction="column">
+      <Grid item container direction="column" className={classes.pageContainer}>
         <Grid container direction="row">
           <Grid item container direction="column" lg={4}>
             <Grid
@@ -188,6 +191,7 @@ export default function Contact({ setValue, setSelectedIndex }) {
               {textFields.map((textField) => (
                 <Grid
                   item
+                  key={textField.name}
                   style={{
                     marginRight: "2em",
                     marginLeft: "2em",
@@ -277,6 +281,7 @@ export default function Contact({ setValue, setSelectedIndex }) {
               <Grid container direction="column">
                 {textFields.map((textField) => (
                   <Grid
+                    key={textField.name}
                     item
                     style={{
                       marginLeft: matchesXS ? "1em" : "2em",

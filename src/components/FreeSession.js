@@ -191,6 +191,7 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
             <Grid container direction="column">
               {textFields.map((textField) => (
                 <Grid
+                  key={textField.name}
                   item
                   style={{
                     marginLeft: "2em",
@@ -359,6 +360,7 @@ export default function FreeSession({ setValue, setSelectedIndex }) {
               <Grid container direction="column">
                 {textFields.map((textField) => (
                   <Grid
+                    key={textField.name}
                     item
                     style={{
                       marginLeft: matchesXS ? "1em" : "2em",

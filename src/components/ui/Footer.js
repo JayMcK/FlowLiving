@@ -112,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
     width: "10em",
     fontWeight: "bold",
-    height: "2em",
+    height: "2.3em",
     marginTop: "0.5em",
     "&:hover": {
       backgroundColor: theme.palette.secondary.light,
@@ -221,6 +221,7 @@ export default function Footer({
             <Grid item container direction="row" justifyContent="center">
               {socialMediaIcons.map((icon) => (
                 <Grid
+                  key={icon.href}
                   item
                   component={"a"}
                   href={icon.href}
@@ -263,7 +264,7 @@ export default function Footer({
                 value={email}
                 onChange={(e) => handleChange(e)}
                 classes={{ root: classes.textField }}
-                placeholder="Please enter your email address..."
+                placeholder="Enter your email address..."
                 style={{ width: "17em" }}
               />
             </Grid>
@@ -324,7 +325,7 @@ export default function Footer({
           <Grid item style={{ marginBottom: "2em" }}>
             <Grid container direction="row" justifyContent="center">
               {links.map((link) => (
-                <Grid item>
+                <Grid item key={link.link}>
                   <Button
                     component={Link}
                     to={link.link}
@@ -430,6 +431,7 @@ export default function Footer({
               href={icon.href}
               target="_blank"
               rel="noopener noreferrer"
+              key={icon.href}
             >
               <img
                 src={icon.src}
@@ -468,6 +470,7 @@ export default function Footer({
               href={icon.href}
               target="_blank"
               rel="noopener noreferrer"
+              key={icon.href}
             >
               <img
                 src={icon.src}

@@ -318,6 +318,7 @@ export default function Header({
         Free Session
       </Button>
       <Menu
+        disableScrollLock={true}
         elevation={0}
         id="menu"
         anchorEl={anchorEl}
